@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>courseServlet</servlet-name>
+    <servlet-class>com.vt.lab1.server.CourseServiceImpl</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>courseContentServlet</servlet-name>
+    <servlet-class>com.vt.lab1.server.CourseContentServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>greetServlet</servlet-name>
+    <servlet-class>com.vt.lab1.server.GreetingServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>courseServlet</servlet-name>
+    <url-pattern>/lab1/course</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>courseContentServlet</servlet-name>
+    <url-pattern>/lab1/coursecontent/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>greetServlet</servlet-name>
+    <url-pattern>/lab1/greet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>Lab1.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>
